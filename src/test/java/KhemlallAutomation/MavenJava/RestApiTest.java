@@ -9,7 +9,7 @@ public class RestApiTest {
 		System.out.println("i am executing api jira");
 	}
 	
-	@Test
+	@Test(groups="regression")
 	public void DeleteTwitter()
 	{
 		System.out.println("i am executing api twittwer");
