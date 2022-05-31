@@ -3,7 +3,7 @@ import org.testng.annotations.Test;
 
 public class SeleniumTest {
 	
-	@Test(enabled=false)
+	@Test
 	public void BrowserAutomation()
 	{
 		System.out.println("i am executing seleniumtest BrowserAutomation");

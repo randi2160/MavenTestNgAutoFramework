@@ -1,3 +1,6 @@
-KhemlallAutomation\MavenJava\SeleniumTest.class
 KhemlallAutomation\MavenJava\AppiumTest.class
+pageObjects\dependencies.class
+pageObjects\preferences.class
+KhemlallAutomation\MavenJava\SeleniumTest.class
 KhemlallAutomation\MavenJava\RestApiTest.class
+pageObjects\homePage.class
