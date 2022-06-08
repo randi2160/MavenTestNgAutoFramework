@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="KhemlallAutomation.MavenJava.ecommerce4Test">
+      <class name="KhemlallAutomation.MavenJava.Ecommerce4Test">
         <methods>
           <include name="TotalValidation"/>
+          <include name="killAllNodes"/>
         </methods>
-      </class> <!-- KhemlallAutomation.MavenJava.ecommerce4Test -->
+      </class> <!-- KhemlallAutomation.MavenJava.Ecommerce4Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

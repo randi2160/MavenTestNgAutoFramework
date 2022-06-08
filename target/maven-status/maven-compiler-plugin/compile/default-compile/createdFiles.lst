@@ -1,2 +1,8 @@
 KhemlallAutomation\MavenJava\base.class
 KhemlallAutomation\MavenJava\App.class
+pageObjects\dependencies.class
+utility\Utilities.class
+pageObjects\preferences.class
+pageObjects\CheckoutPage.class
+pageObjects\FormPage.class
+pageObjects\homePage.class

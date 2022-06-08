@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="TestSuite" time="0.09" errors="0" skipped="0">
+<testsuite tests="8" failures="2" name="TestSuite" time="205.5" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.15.1+2-LTS-10"/>
@@ -65,10 +65,311 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="KhemlallAutomation.MavenJava.AppiumTest" name="IosApp" time="0.087"/>
-  <testcase classname="KhemlallAutomation.MavenJava.AppiumTest" name="NativeAppAndroid" time="0.001"/>
-  <testcase classname="KhemlallAutomation.MavenJava.RestApiTest" name="DeleteTwitter" time="0"/>
-  <testcase classname="KhemlallAutomation.MavenJava.RestApiTest" name="PostJira" time="0"/>
+  <testcase classname="KhemlallAutomation.MavenJava.ApiDemoTest" name="tests" time="16.421">
+    <failure message="Unable to create a new remote session. Original error: Connection reset
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-UF9A8OM1&apos;, ip: &apos;192.168.0.7&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15.1&apos;
+Driver info: driver.version: AndroidDriver" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Original error: Connection reset
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-UF9A8OM1&apos;, ip: &apos;192.168.0.7&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15.1&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:216)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:225)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:99)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:97)
+	at KhemlallAutomation.MavenJava.base.capabilities(base.java:114)
+	at KhemlallAutomation.MavenJava.ApiDemoTest.tests(ApiDemoTest.java:26)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:193)
+	... 53 more
+Caused by: java.net.SocketException: Connection reset
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:186)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at okio.Okio$2.read(Okio.java:140)
+	at okio.AsyncTimeout$2.read(AsyncTimeout.java:237)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.java:355)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:227)
+	at okhttp3.internal.http1.Http1Codec.readHeaderLine(Http1Codec.java:215)
+	at okhttp3.internal.http1.Http1Codec.readResponseHeaders(Http1Codec.java:189)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.java:88)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at org.openqa.selenium.remote.internal.OkHttpClient$Factory$1.lambda$createClient$1(OkHttpClient.java:152)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:45)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+	at okhttp3.RealCall.execute(RealCall.java:77)
+	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$1(AppiumCommandExecutor.java:162)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
+	... 58 more
+</failure>
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@101df177
+</system-out>
+  </testcase>
+  <testcase classname="KhemlallAutomation.MavenJava.AppiumTest" name="IosApp" time="0.005"/>
+  <testcase classname="KhemlallAutomation.MavenJava.AppiumTest" name="NativeAppAndroid" time="0.005"/>
+  <testcase classname="KhemlallAutomation.MavenJava.Ecommerce4Test" name="TotalValidation" time="189.037">
+    <failure message="Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\kheml\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell pm clear com.androidsample.generalstore&apos; timed out after 20000ms&apos;. Try to increase the 20000ms adb execution timeout represented by &apos;adbExecTimeout&apos; capability
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-UF9A8OM1&apos;, ip: &apos;192.168.0.7&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15.1&apos;
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\kheml\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell pm clear com.androidsample.generalstore&apos; timed out after 20000ms&apos;. Try to increase the 20000ms adb execution timeout represented by &apos;adbExecTimeout&apos; capability
+    at getResponseForW3CError (C:\Users\kheml\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\kheml\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:380:37)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-UF9A8OM1&apos;, ip: &apos;192.168.0.7&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15.1&apos;
+Driver info: driver.version: AndroidDriver" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\kheml\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell pm clear com.androidsample.generalstore&apos; timed out after 20000ms&apos;. Try to increase the 20000ms adb execution timeout represented by &apos;adbExecTimeout&apos; capability
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-UF9A8OM1&apos;, ip: &apos;192.168.0.7&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15.1&apos;
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\kheml\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell pm clear com.androidsample.generalstore&apos; timed out after 20000ms&apos;. Try to increase the 20000ms adb execution timeout represented by &apos;adbExecTimeout&apos; capability
+    at getResponseForW3CError (C:\Users\kheml\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\kheml\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:380:37)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-UF9A8OM1&apos;, ip: &apos;192.168.0.7&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15.1&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:216)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:225)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:99)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:97)
+	at KhemlallAutomation.MavenJava.base.capabilities(base.java:114)
+	at KhemlallAutomation.MavenJava.Ecommerce4Test.TotalValidation(Ecommerce4Test.java:34)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:193)
+	... 53 more
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\kheml\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell pm clear com.androidsample.generalstore&apos; timed out after 20000ms&apos;. Try to increase the 20000ms adb execution timeout represented by &apos;adbExecTimeout&apos; capability
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-UF9A8OM1&apos;, ip: &apos;192.168.0.7&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15.1&apos;
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\kheml\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell pm clear com.androidsample.generalstore&apos; timed out after 20000ms&apos;. Try to increase the 20000ms adb execution timeout represented by &apos;adbExecTimeout&apos; capability
+    at getResponseForW3CError (C:\Users\kheml\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\kheml\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:380:37)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	... 58 more
+</failure>
+    <system-out>&amp;#27;[35m[Appium]&amp;#27;[39m Welcome to Appium v1.22.3
+&amp;#27;[35m[Appium]&amp;#27;[39m Appium REST http interface listener started on 0.0.0.0:4723
+&amp;#27;[35m[HTTP]&amp;#27;[39m &amp;#27;[37m--&gt;&amp;#27;[39m &amp;#27;[37mGET&amp;#27;[39m &amp;#27;[37m/wd/hub/status&amp;#27;[39m
+&amp;#27;[35m[HTTP]&amp;#27;[39m &amp;#27;[90m{}&amp;#27;[39m
+[debug] &amp;#27;[35m[GENERIC]&amp;#27;[39m Calling AppiumDriver.getStatus() with args: []
+[debug] &amp;#27;[35m[GENERIC]&amp;#27;[39m Responding to client with driver.getStatus() result: {&quot;build&quot;:{&quot;version&quot;:&quot;1.22.3&quot;}}
+&amp;#27;[35m[HTTP]&amp;#27;[39m &amp;#27;[37m&lt;-- GET /wd/hub/status &amp;#27;[39m&amp;#27;[32m200&amp;#27;[39m &amp;#27;[90m29 ms - 68&amp;#27;[39m
+&amp;#27;[35m[HTTP]&amp;#27;[39m &amp;#27;[90m&amp;#27;[39m
+[debug] &amp;#27;[35m[HTTP]&amp;#27;[39m Request idempotency key: 861f50ea-ecf4-4f9b-89e0-389df1380416
+&amp;#27;[35m[HTTP]&amp;#27;[39m &amp;#27;[37m--&gt;&amp;#27;[39m &amp;#27;[37mPOST&amp;#27;[39m &amp;#27;[37m/wd/hub/session&amp;#27;[39m
+&amp;#27;[35m[HTTP]&amp;#27;[39m &amp;#27;[90m{&quot;desiredCapabilities&quot;:{&quot;app&quot;:&quot;C:\\Users\\kheml\\Training\\appium\\MavenJava\\src\\General-Store.apk&quot;,&quot;automationName&quot;:&quot;uiautomator2&quot;,&quot;platformName&quot;:&quot;Android&quot;,&quot;deviceName&quot;:&quot;Nexus_5X_API_30&quot;},&quot;capabilities&quot;:{&quot;firstMatch&quot;:[{&quot;appium:app&quot;:&quot;C:\\Users\\kheml\\Training\\appium\\MavenJava\\src\\General-Store.apk&quot;,&quot;appium:automationName&quot;:&quot;uiautomator2&quot;,&quot;appium:deviceName&quot;:&quot;Nexus_5X_API_30&quot;,&quot;platformName&quot;:&quot;android&quot;}]}}&amp;#27;[39m
+[debug] &amp;#27;[35m[W3C]&amp;#27;[39m Calling AppiumDriver.createSession() with args: [{&quot;app&quot;:&quot;C:\\Users\\kheml\\Training\\appium\\MavenJava\\src\\General-Store.apk&quot;,&quot;automationName&quot;:&quot;uiautomator2&quot;,&quot;platformName&quot;:&quot;Android&quot;,&quot;deviceName&quot;:&quot;Nexus_5X_API_30&quot;},null,{&quot;firstMatch&quot;:[{&quot;appium:app&quot;:&quot;C:\\Users\\kheml\\Training\\appium\\MavenJava\\src\\General-Store.apk&quot;,&quot;appium:automationName&quot;:&quot;uiautomator2&quot;,&quot;appium:deviceName&quot;:&quot;Nexus_5X_API_30&quot;,&quot;platformName&quot;:&quot;android&quot;}]}]
+[debug] &amp;#27;[35m[BaseDriver]&amp;#27;[39m Event &apos;newSessionRequested&apos; logged at 1654306427397 (21:33:47 GMT-0400 (Eastern Daylight Time))
+&amp;#27;[35m[Appium]&amp;#27;[39m Appium v1.22.3 creating new AndroidUiautomator2Driver (v1.70.1) session
+[debug] &amp;#27;[35m[BaseDriver]&amp;#27;[39m W3C capabilities and MJSONWP desired capabilities were provided
+[debug] &amp;#27;[35m[BaseDriver]&amp;#27;[39m Creating session with W3C capabilities: {
+[debug] &amp;#27;[35m[BaseDriver]&amp;#27;[39m   &quot;alwaysMatch&quot;: {
+[debug] &amp;#27;[35m[BaseDriver]&amp;#27;[39m     &quot;platformName&quot;: &quot;android&quot;,
+[debug] &amp;#27;[35m[BaseDriver]&amp;#27;[39m     &quot;appium:app&quot;: &quot;C:\\Users\\kheml\\Training\\appium\\MavenJava\\src\\General-Store.apk&quot;,
+[debug] &amp;#27;[35m[BaseDriver]&amp;#27;[39m     &quot;appium:automationName&quot;: &quot;uiautomator2&quot;,
+[debug] &amp;#27;[35m[BaseDriver]&amp;#27;[39m     &quot;appium:deviceName&quot;: &quot;Nexus_5X_API_30&quot;
+[debug] &amp;#27;[35m[BaseDriver]&amp;#27;[39m   },
+[debug] &amp;#27;[35m[BaseDriver]&amp;#27;[39m   &quot;firstMatch&quot;: [
+[debug] &amp;#27;[35m[BaseDriver]&amp;#27;[39m     {}
+[debug] &amp;#27;[35m[BaseDriver]&amp;#27;[39m   ]
+[debug] &amp;#27;[35m[BaseDriver]&amp;#27;[39m }
+&amp;#27;[35m[BaseDriver]&amp;#27;[39m Session created with session id: b6586bc0-83bd-4e61-beea-a081dea191d6
+&amp;#27;[35m[BaseDriver]&amp;#27;[39m Using local app &apos;C:\Users\kheml\Training\appium\MavenJava\src\General-Store.apk&apos;
+[debug] &amp;#27;[35m[UiAutomator2]&amp;#27;[39m Checking whether app is actually present
+&amp;#27;[35m[ADB]&amp;#27;[39m Found 4 &apos;build-tools&apos; folders under &apos;C:\Users\kheml\AppData\Local\Android\Sdk&apos; (newest first):
+&amp;#27;[35m[ADB]&amp;#27;[39m     C:/Users/kheml/AppData/Local/Android/Sdk/build-tools/33.0.0-rc4
+&amp;#27;[35m[ADB]&amp;#27;[39m     C:/Users/kheml/AppData/Local/Android/Sdk/build-tools/32.1.0-rc1
+&amp;#27;[35m[ADB]&amp;#27;[39m     C:/Users/kheml/AppData/Local/Android/Sdk/build-tools/32.0.0
+&amp;#27;[35m[ADB]&amp;#27;[39m     C:/Users/kheml/AppData/Local/Android/Sdk/build-tools/30.0.3
+&amp;#27;[35m[ADB]&amp;#27;[39m Using &apos;adb.exe&apos; from &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 start-server&apos;
+&amp;#27;[35m[AndroidDriver]&amp;#27;[39m Retrieving device list
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Trying to find a connected android device
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Getting connected devices
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Connected devices: [{&quot;udid&quot;:&quot;emulator-5554&quot;,&quot;state&quot;:&quot;device&quot;}]
+&amp;#27;[35m[AndroidDriver]&amp;#27;[39m Using device: emulator-5554
+&amp;#27;[35m[ADB]&amp;#27;[39m Using &apos;adb.exe&apos; from &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 start-server&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Setting device id to emulator-5554
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell getprop ro.build.version.sdk&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Current device property &apos;ro.build.version.sdk&apos;: 30
+&amp;#27;[35m[ADB]&amp;#27;[39m Getting device platform version
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell getprop ro.build.version.release&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Current device property &apos;ro.build.version.release&apos;: 11
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Device API level: 30
+&amp;#27;[35m[UiAutomator2]&amp;#27;[39m Relaxing hidden api policy
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell &apos;settings put global hidden_api_policy_pre_p_apps 1;settings put global hidden_api_policy_p_apps 1;settings put global hidden_api_policy 1&apos;&apos;
+[debug] &amp;#27;[35m[AndroidDriver]&amp;#27;[39m Parsing package and activity from app manifest
+&amp;#27;[35m[ADB]&amp;#27;[39m Package name: &apos;com.androidsample.generalstore&apos;
+&amp;#27;[35m[ADB]&amp;#27;[39m Main activity name: &apos;com.androidsample.generalstore.SplashActivity&apos;
+[debug] &amp;#27;[35m[AndroidDriver]&amp;#27;[39m Parsed package and activity are: com.androidsample.generalstore/com.androidsample.generalstore.SplashActivity
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 wait-for-device&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell echo ping&apos;
+[debug] &amp;#27;[35m[AndroidDriver]&amp;#27;[39m Pushing settings apk to device...
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Getting install status for io.appium.settings
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.settings&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m &apos;io.appium.settings&apos; is not installed
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m App &apos;C:\Users\kheml\AppData\Roaming\npm\node_modules\appium\node_modules\io.appium.settings\apks\settings_apk-debug.apk&apos; is not installed
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Installing &apos;C:\Users\kheml\AppData\Roaming\npm\node_modules\appium\node_modules\io.appium.settings\apks\settings_apk-debug.apk&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 help&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 features&apos;
+&amp;#27;[35m[ADB]&amp;#27;[39m The application at &apos;C:\Users\kheml\AppData\Roaming\npm\node_modules\appium\node_modules\io.appium.settings\apks\settings_apk-debug.apk&apos; will not be cached, because the device under test has confirmed the support of streamed installs
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 install -g C:\Users\kheml\AppData\Roaming\npm\node_modules\appium\node_modules\io.appium.settings\apks\settings_apk-debug.apk&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Getting install status for io.appium.settings
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.settings&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m &apos;io.appium.settings&apos; is installed
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Getting package info for &apos;io.appium.settings&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.settings&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m The version name of the installed &apos;io.appium.settings&apos; is greater or equal to the application version name (&apos;3.4.0&apos; &gt;= &apos;3.4.0&apos;)
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m There is no need to install/upgrade &apos;C:\Users\kheml\AppData\Roaming\npm\node_modules\appium\node_modules\io.appium.settings\apks\settings_apk-debug.apk&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Getting IDs of all &apos;io.appium.settings&apos; processes
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell &apos;pgrep --help; echo $?&apos;&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pgrep -f \(\[\[:blank:\]\]\|\^\)io\.appium\.settings\(\[\[:blank:\]\]\|\$\)&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Getting IDs of all &apos;io.appium.settings&apos; processes
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pgrep -f \(\[\[:blank:\]\]\|\^\)io\.appium\.settings\(\[\[:blank:\]\]\|\$\)&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Starting Appium Settings app
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell am start -n io.appium.settings/.Settings -a android.intent.action.MAIN -c android.intent.category.LAUNCHER&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Getting IDs of all &apos;io.appium.settings&apos; processes
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pgrep -f \(\[\[:blank:\]\]\|\^\)io\.appium\.settings\(\[\[:blank:\]\]\|\$\)&apos;
+[debug] &amp;#27;[35m[Logcat]&amp;#27;[39m Starting logs capture with command: C:\\Users\\kheml\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 logcat -v threadtime
+[debug] &amp;#27;[35m[UiAutomator2]&amp;#27;[39m Forwarding UiAutomator2 Server port 6790 to local port 8200
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Forwarding system: 8200 to device: 6790
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 forward tcp:8200 tcp:6790&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Getting install status for io.appium.uiautomator2.server
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m &apos;io.appium.uiautomator2.server&apos; is installed
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Getting package info for &apos;io.appium.uiautomator2.server&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m The version name of the installed &apos;io.appium.uiautomator2.server&apos; is greater or equal to the application version name (&apos;4.27.0&apos; &gt;= &apos;4.27.0&apos;)
+[debug] &amp;#27;[35m[UiAutomator2]&amp;#27;[39m io.appium.uiautomator2.server installation state: sameVersionInstalled
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Checking app cert for C:\Users\kheml\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v4.27.0.apk
+&amp;#27;[35m[ADB]&amp;#27;[39m Using &apos;apksigner.jar&apos; from &apos;C:\Users\kheml\AppData\Local\Android\Sdk\build-tools\33.0.0-rc4\lib\apksigner.jar&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Starting apksigner: &apos;C:\\Program Files\\Java\\jdk-11.0.15.1\\bin\\java.exe&apos; -Xmx1024M -Xss1m -jar C:\\Users\\kheml\\AppData\\Local\\Android\\Sdk\\build-tools\\33.0.0-rc4\\lib\\apksigner.jar verify --print-certs C:\\Users\\kheml\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-uiautomator2-server\\apks\\appium-uiautomator2-server-v4.27.0.apk
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m 
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m sha256 hash did match for &apos;appium-uiautomator2-server-v4.27.0.apk&apos;
+&amp;#27;[35m[ADB]&amp;#27;[39m &apos;C:\Users\kheml\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v4.27.0.apk&apos; is signed with the default certificate
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Getting install status for io.appium.uiautomator2.server.test
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server.test&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m &apos;io.appium.uiautomator2.server.test&apos; is installed
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Checking app cert for C:\Users\kheml\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Starting apksigner: &apos;C:\\Program Files\\Java\\jdk-11.0.15.1\\bin\\java.exe&apos; -Xmx1024M -Xss1m -jar C:\\Users\\kheml\\AppData\\Local\\Android\\Sdk\\build-tools\\33.0.0-rc4\\lib\\apksigner.jar verify --print-certs C:\\Users\\kheml\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-uiautomator2-server\\apks\\appium-uiautomator2-server-debug-androidTest.apk
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m 
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m sha256 hash did match for &apos;appium-uiautomator2-server-debug-androidTest.apk&apos;
+&amp;#27;[35m[ADB]&amp;#27;[39m &apos;C:\Users\kheml\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk&apos; is signed with the default certificate
+&amp;#27;[35m[UiAutomator2]&amp;#27;[39m Server packages are not going to be (re)installed
+[debug] &amp;#27;[35m[UiAutomator2]&amp;#27;[39m Waiting up to 30000ms for services to be available
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pm list instrumentation&apos;
+[debug] &amp;#27;[35m[UiAutomator2]&amp;#27;[39m Instrumentation target &apos;io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner&apos; is available
+&amp;#27;[35m[ADB]&amp;#27;[39m Adding packages [&quot;io.appium.settings&quot;,&quot;io.appium.uiautomator2.server&quot;,&quot;io.appium.uiautomator2.server.test&quot;] to Doze whitelist
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Got the following command chunks to execute: [[&quot;dumpsys&quot;,&quot;deviceidle&quot;,&quot;whitelist&quot;,&quot;+io.appium.settings&quot;,&quot;;&quot;,&quot;dumpsys&quot;,&quot;deviceidle&quot;,&quot;whitelist&quot;,&quot;+io.appium.uiautomator2.server&quot;,&quot;;&quot;,&quot;dumpsys&quot;,&quot;deviceidle&quot;,&quot;whitelist&quot;,&quot;+io.appium.uiautomator2.server.test&quot;,&quot;;&quot;]]
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys deviceidle whitelist +io.appium.settings ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server.test ;&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Checking app cert for C:\Users\kheml\Training\appium\MavenJava\src\General-Store.apk
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Starting apksigner: &apos;C:\\Program Files\\Java\\jdk-11.0.15.1\\bin\\java.exe&apos; -Xmx1024M -Xss1m -jar C:\\Users\\kheml\\AppData\\Local\\Android\\Sdk\\build-tools\\33.0.0-rc4\\lib\\apksigner.jar verify --print-certs C:\\Users\\kheml\\Training\\appium\\MavenJava\\src\\General-Store.apk
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m 
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m sha256 hash did match for &apos;General-Store.apk&apos;
+&amp;#27;[35m[ADB]&amp;#27;[39m &apos;C:\Users\kheml\Training\appium\MavenJava\src\General-Store.apk&apos; is signed with the default certificate
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Getting install status for com.androidsample.generalstore
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package com.androidsample.generalstore&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m &apos;com.androidsample.generalstore&apos; is installed
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Getting package info for &apos;com.androidsample.generalstore&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package com.androidsample.generalstore&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m The version name of the installed &apos;com.androidsample.generalstore&apos; is greater or equal to the application version name (&apos;1.0.0&apos; &gt;= &apos;1.0.0&apos;)
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m There is no need to install/upgrade &apos;C:\Users\kheml\Training\appium\MavenJava\src\General-Store.apk&apos;
+&amp;#27;[35m[AndroidDriver]&amp;#27;[39m Performing fast reset on &apos;com.androidsample.generalstore&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Getting install status for com.androidsample.generalstore
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package com.androidsample.generalstore&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m &apos;com.androidsample.generalstore&apos; is installed
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell am force-stop com.androidsample.generalstore&apos;
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pm clear com.androidsample.generalstore&apos;
+[debug] &amp;#27;[35m[UiAutomator2]&amp;#27;[39m Deleting UiAutomator2 session
+[debug] &amp;#27;[35m[UiAutomator2]&amp;#27;[39m Deleting UiAutomator2 server session
+[debug] &amp;#27;[35m[WD Proxy]&amp;#27;[39m Matched &apos;/&apos; to command name &apos;deleteSession&apos;
+&amp;#27;[35m[UiAutomator2]&amp;#27;[39m Did not get confirmation UiAutomator2 deleteSession worked; Error was: UnknownError: An unknown server-side error occurred while processing the command. Original error: Trying to proxy a session command without session id
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell am force-stop com.androidsample.generalstore&apos;
+[debug] &amp;#27;[35m[Logcat]&amp;#27;[39m Stopping logcat capture
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Removing forwarded port socket connection: 8200 
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 forward --remove tcp:8200&apos;
+&amp;#27;[35m[UiAutomator2]&amp;#27;[39m Restoring hidden api policy to the device default configuration
+[debug] &amp;#27;[35m[ADB]&amp;#27;[39m Running &apos;C:\Users\kheml\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell &apos;settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy&apos;&apos;
+[debug] &amp;#27;[35m[BaseDriver]&amp;#27;[39m Event &apos;newSessionStarted&apos; logged at 1654306588147 (21:36:28 GMT-0400 (Eastern Daylight Time))
+[debug] &amp;#27;[35m[W3C]&amp;#27;[39m Encountered internal error running command: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\kheml\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell pm clear com.androidsample.generalstore&apos; timed out after 20000ms&apos;. Try to increase the 20000ms adb execution timeout represented by &apos;adbExecTimeout&apos; capability
+[debug] &amp;#27;[35m[W3C]&amp;#27;[39m Error: Command &apos;C:\\Users\\kheml\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell pm clear com.androidsample.generalstore&apos; timed out after 20000ms
+[debug] &amp;#27;[35m[W3C]&amp;#27;[39m     at Timeout._onTimeout (C:\Users\kheml\AppData\Roaming\npm\node_modules\appium\node_modules\teen_process\lib\exec.js:125:19)
+[debug] &amp;#27;[35m[W3C]&amp;#27;[39m     at listOnTimeout (node:internal/timers:559:17)
+[debug] &amp;#27;[35m[W3C]&amp;#27;[39m     at processTimers (node:internal/timers:502:7)
+&amp;#27;[35m[HTTP]&amp;#27;[39m &amp;#27;[37m&lt;-- POST /wd/hub/session &amp;#27;[39m&amp;#27;[31m500&amp;#27;[39m &amp;#27;[90m160947 ms - 1219&amp;#27;[39m
+&amp;#27;[35m[HTTP]&amp;#27;[39m &amp;#27;[90m&amp;#27;[39m
+</system-out>
+  </testcase>
+  <testcase classname="KhemlallAutomation.MavenJava.RestApiTest" name="DeleteTwitter" time="0.001"/>
+  <testcase classname="KhemlallAutomation.MavenJava.RestApiTest" name="PostJira" time="0.009"/>
   <testcase classname="KhemlallAutomation.MavenJava.SeleniumTest" name="BrowserAutomation" time="0.002"/>
-  <testcase classname="KhemlallAutomation.MavenJava.SeleniumTest" name="FindElement" time="0"/>
+  <testcase classname="KhemlallAutomation.MavenJava.SeleniumTest" name="FindElement" time="0.02"/>
 </testsuite>
